@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>Hangman</title>
+	
+	<script type="text/javascript">
+
+var guessInt = 6;
+
+var guessStr = "You have " + guessInt + "tries left";
+
+function getWord()
+{
+var words = new Array("UNIVERSITY" , "FLORIDA" , "COMPUTER" , "ORLANDO" , "DISNEY" , "CLASS" , "TEXTBOOK" , "FLOWER" , "TREE" , "APPLE" , "CELLPHONE" , "LAPTOP" , "WATER" , "FOOD" , "MUSIC");
+
+var index = Math.floor(Math.random() * words.length);
+
+return words[index];
+}
+
+function getDisplay(word)
+{
+var display = "";
+
+for (var i = 0; i < word.length; i++)
+{
+
+display += "_ ";
+}
+
+return display;
+}
+
+function start()
+{
+guessInt = 6;
+var word = getWord();
+
+var display = getDisplay(word);
+
+var guessStr = "You have " + guessInt + " tries left";
+
+document.getElementById("guesses").innerHTML = guessStr;
+document.getElementById("theWord").innerHTML = word;
+document.getElementById("theDashes").innerHTML = display;
+}
+</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+	</script>
+	<div id="header">
+		<img src="hangman_large.png" style="float:left" width="100" height="100"/>
+		<hr/>
+		<h1 align="center">Hangman</h1>
+			<hr/></div>
+			</img>
+<p>&nbsp;</p>
+<div id="letters" style="width: 400px; float: left;">
+		<table>
+			<tr>
+				<td><input type="submit" value="A" id="A" /></td>
+				<td><input type="submit" value="B" id="B" /></td>
+				<td><input type="submit" value="C" id="C" /></td>
+				<td><input type="submit" value="D" id="D" /></td>
+				<td><input type="submit" value="E" id="E" /></td>
+				<td><input type="submit" value="F" id="F" /></td>
+				<td><input type="submit" value="G" id="G" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="H" id="H" /></td>
+			  <td><input type="submit" value="I" id="I" /></td>
+			  <td><input type="submit" value="J" id="J" /></td>
+			  <td><input type="submit" value="K" id="K" /></td>
+			  <td><input type="submit" value="L" id="L" /></td>
+			  <td><input type="submit" value="M" id="M" /></td>
+			  <td><input type="submit" value="N" id="N" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="O" id="O" /></td>
+				<td><input type="submit" value="P" id="P" /></td>
+				<td><input type="submit" value="Q" id="Q" /></td>
+				<td><input type="submit" value="R" id="R" /></td>
+				<td><input type="submit" value="S" id="S" /></td>
+				<td><input type="submit" value="T" id="T" /></td>
+				<td><input type="submit" value="U" id="U" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="V" id="V" /></td>
+				<td><input type="submit" value="W" id="W" /></td>
+				<td><input type="submit" value="X" id="X" /></td>
+				<td><input type="submit" value="Y" id="Y" /></td>
+				<td><input type="submit" value="Z" id="Z" /></td>
+			</tr>
+		</table>
+
+		<input type="submit" style="width:150;height:50" value="Play" id="play" class="restart" onclick="start()"/>
+	</div>
+	<div style="width:400px;float:left;">
+		<h2>Let's Play!</h2>
+		<h3 id="guesses">this is the inner html</h3>
+		<h2 id="theWord"></h2>
+		<h2 id="theDashes"></h2>
+	</div>
+</body>
+</html>
