@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	
+	const taxRate = .065
+	var subtotal = 329.03
+	var salesTax;
+	var total;
+	
+	salesTax = subtotal * taxRate;
+	
+	salesTax = parseFloat(salesTax).toFixed(2);
+	
+	total = subtotal + parseFloat(salesTax);
+	
+	total = parseFloat(total).toFixed(2);
+	
+	document.write("Subtotal = $" + subtotal + "<br>");
+	
+	document.write("Sales Tax = $" + salesTax + "<br>");
+	
+	document.write("Total = $" + total + "<br>");
+</script>
+</body>
+</html>
