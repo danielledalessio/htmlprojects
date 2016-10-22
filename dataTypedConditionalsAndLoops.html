@@ -1,0 +1,62 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	
+	var num1 = prompt("Enter number");
+	var num2 = prompt ("Enter number");
+	
+	var Product= alert(num1 * num2);
+	
+	var temperature = prompt("Enter your temperature ", "");
+		temperature = parseFloat(temperature);
+		if(temperature >= 98.0 && temperature <= 98.9)
+		{
+			alert("You seem healthy to me");
+		}
+		else
+		{
+			alert("You probably should see a doctor");
+		}
+	
+	var cats = parseInt(prompt("Enter how many cats you own", ""));
+		switch (cats)
+		{
+			case 0:
+				alert("Nothing to worry about");
+				break;
+			case 1:
+				alert("Normal");
+				break;
+			case 2:
+				alert("Still normal");
+				break;
+			case 3:
+				alert("You should slow down with the cats");
+				break;
+			case 4:
+				alert("Amateaur Crazy Cat Person");
+				break;
+			case 5:
+				alert("Midgrade Crazy Cat Person");
+				break;
+			default:
+				alert("Professional Crazy Cat Person");
+				break;
+		}
+		
+		 var investment = 100000;
+       var rate = .08;
+
+       for(var year = 0; year < 10; year++)
+       {
+       var amount = (investment * (1.0 + rate * year));
+       document.writeln("Year " + year + " balance is " + parseInt(amount) + "<br>");
+       }
+
+</script>
+</body>
+</html>
